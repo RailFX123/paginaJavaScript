@@ -5,16 +5,17 @@
 
  function ejemplo2(e) {
      var t2 = document.getElementsByTagName(e);
-     t2.firstChild.nodeValue = "He cambiado por medio de mi tag";
+     t2[1].firstChild.nodeValue = "He cambiado por medio de mi tag";
  }
 
  function ejemplo3(e) {
      var t2 = document.getElementsByClassName(e);
+     console.log(t2);
      t2[0].firstChild.nodeValue = "He cambiado por medio de mi clase";
  }
 
  document.addEventListener("click", function(e) {
-     console.log(e)
+     //console.log(e)
      if (e.target.id == "boton1") {
          ejemplo1("ejemplo1");
      }

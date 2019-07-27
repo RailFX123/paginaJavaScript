@@ -1,3 +1,4 @@
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <!DOCTYPE HTML>
 <!--
 	Phantom by HTML5 UP
@@ -7,12 +8,13 @@
 <html>
 
 <head>
-    <title>Elementos</title>
+    <title>API</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <script src="assets\js\elementos.js"></script>
+    <script src="assets\js\jquery-1.11.0.min.js"></script>
+    <script src="assets\js\jqueryapi.js"></script>
 </head>
 
 <body class="is-preload">
@@ -41,48 +43,31 @@
             <h2>Menu</h2>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="api.html">Api</a></li>
+                <li><a href="selectores.html">Selectores</a></li>
+                <li><a href="elementos.html">Elementos</a></li>
             </ul>
         </nav>
 
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <h1>Elementos</h1>
+                <h1>API</h1>
 
                 <!-- Text -->
                 <section>
-                    <h2>Obtener elementos por ID</h2>
-                    <pre><code>var t2 = document.getElementById(e);
-t2.firstChild.nodeValue = "He cambiado por medio de mi id";</code></pre>
+                    <h2>Evento Click jquery</h2>
+                    <pre><code>$(document).ready(function() {
+    $("#boton1").click(function() {
+        alert("Haz hecho click y lanzado este mensaje gracias a JQuery")
+    });
+});</code></pre>
                     <p id="ejemplo1">Soy un parrafo</p>
                     <div class="row">
                         <div class="col-6 col-12-medium">
                             <ul class="actions stacked">
                                 <li><a id="boton1" class="button primary">Probar</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h2>Obtener elementos por tag</h2>
-                    <pre><code>var t2 = document.getElementsByTagName(e);
-t2[1].firstChild.nodeValue = "He cambiado por medio de mi tag";</code></pre>
-                    <p id="ejemplo2">Soy un parrafo</p>
-                    <div class="row">
-                        <div class="col-6 col-12-medium">
-                            <ul class="actions stacked">
-                                <li><a id="boton2" class="button primary">Probar</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h2>Obtener elementos por clase</h2>
-                    <pre>
-                        <code>var t2 = document.getElementsByClassName(e);
-t2[0].firstChild.nodeValue = "He cambiado por medio de mi clase";</code></pre>
-                    <p class="ejemplo3">Soy un parrafo</p>
-                    <div class="row">
-                        <div class="col-6 col-12-medium">
-                            <ul class="actions stacked">
-                                <li><a id="boton3" class="button primary">Probar</a></li>
                             </ul>
                         </div>
                     </div>
